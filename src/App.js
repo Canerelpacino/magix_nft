@@ -13,7 +13,7 @@ export const StyledButton = styled.button`
   font-family: 'Freckle Face', cursive;
   font-size: 20px;
   padding: 15px;
-  border-radius: 40px;
+  border-radius: 10px;
   border: none;
   background-color: var(--secondary);
   padding: 15px;
@@ -85,7 +85,7 @@ margin-top: 10vh;
 
 export const MintText = styled.div`
 width: 38%;
-margin-top: 24px;
+margin-top: 3px;
 text-align: center;
   @media (max-width: 600px) {
     width: 350px;
@@ -234,33 +234,16 @@ function App() {
   return (
     <Start>
       <FirstPage>
-        <div style={{width: '100%', display: 'flex', flexDirection: 'row-reverse'}}>
+        <div style={{width: '98%', display: 'flex', flexDirection: 'row-reverse', marginTop: '15px'}}>
           <a href="https://www.google.de/?hl=de">
-          <img style={{width: '50px', marginRight: '5px', marginTop: '5px'}} src="/config/images/tw.png"></img>
+          <img style={{width: '75px'}} src="/config/images/TW_magix.png"></img>
           </a>
           <a href="https://www.google.de/?hl=de">
-          <img style={{width: '50px', marginRight: '5px', marginTop: '5px'}} src="/config/images/os.png"></img>
+          <img style={{width: '75px', marginRight: '5px'}} src="/config/images/OS_magix.png"></img>
           </a>
         </div>
-        <StyledLogo src="/config/images/logo.png"></StyledLogo>
-      </FirstPage>
-
-
-      <SecondPage>
-        <HideImage className={state? "left-image-move":"left-image"}>
-          <span className="left-image-span">
-            <span className="image-span"></span>
-            <img className="hero" src="/config/images/hero.webp"></img>
-          </span>
-        </HideImage>
-        <HideImage className={state? "right-image-move":"right-image"}>
-          <span className="left-image-span">
-            <span className="image-span"></span>
-            <img className="hero" src="/config/images/hero-right.webp"></img>
-          </span>
-        </HideImage>
-        <div style={{display: 'flex', width: '50%', marginTop: '100px'}}>
-          <StyledLogo2 src="/config/images/logo.png"></StyledLogo2>
+        <div style={{display: 'flex', width: '70%', marginTop: '24px'}}>
+          <StyledLogo2 src="/config/images/logo_magix.png"></StyledLogo2>
         </div>
         <MintText>
           <s.TextTitle>
@@ -274,7 +257,7 @@ function App() {
         {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--primary-text)" }}
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
                   SOLD OUT
                 </s.TextTitle>
@@ -306,7 +289,7 @@ function App() {
                         <s.TextDescription
                           style={{
                             textAlign: "center",
-                            color: "var(--primary-text)",
+                            color: "var(--accent-text)",
                           }}
                         >
                           {blockchain.errorMsg}
@@ -319,7 +302,7 @@ function App() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--primary-text)",
+                        color: "var(--accent-text)",
                       }}
                     >
                       {feedback}
@@ -341,7 +324,7 @@ function App() {
                         style={{
                           fontSize: '24px',
                           textAlign: "center",
-                          color: "var(--primary-text)",
+                          color: "var(--accent-text)",
                         }}
                       >
                         {mintAmount}
@@ -375,95 +358,7 @@ function App() {
               </>
             )}
         </div>
-      </SecondPage>
-
-      <Slider>
-      <div style={{marginTop: 'auto'}}>
-      <div class="slider">
-            <div class="slide-track">
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-                  <div class="slide">
-                  <img src="/config/images/screen.png" height="300" width="300" alt="" />
-                  </div>
-            </div>
-      </div>
-      </div>
-      </Slider>
-
-      <ThirdPage>
-        <div className="container">
-            <div className="halfbox">
-              <div className="content">
-                <div className="imagebox">
-                  <img className="logoimage" src="/config/images/logo.png"></img>
-                </div>
-                <div className="textbox">
-                  <s.TextDescription style={{fontSize: '24px', textAlign: 'left'}}>A 2,500 collection of Moon Vamps. You’ll need to have $BLOOD in your wallet to mint.
-                  Each Moon Vamp costs 60 $BLOOD to mint. If you don’t have enough you will be able to 
-                  make up the difference with ETH.</s.TextDescription>
-                </div>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', width: '100%', height: '20%'}}>
-                 <StyledButton style={{margin: 'auto', marginLeft: '0px'}}>OPENSEA</StyledButton>
-                </div>
-              </div>
-            </div>
-            <div className="halfbox2" style={{width: '50%', height: '100%', display: 'flex', justifyContent: 'center'}}>
-                <img src="/config/images/dappr.webp" style={{maxWidth: '100%', width: '70%', height: '80%', margin: 'auto'}}></img>
-            </div>
-        </div>
-      </ThirdPage>
-
-
-      <footer>
-        <div className="test" style={{width: '100%', height: '70px', backgroundColor: 'var(--secondary)'}}>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%'}}>
-            <a href="https://www.google.de/?hl=de">
-            <img src="/config/images/tw.png" style={{width: '40px', marginTop: '12px', marginRight: '10%'}}></img>
-            </a>
-            <a href="https://www.google.de/?hl=de">
-            <img src="/config/images/os.png" style={{width: '40px', marginTop: '12px', marginLeft: '10%'}}></img>
-            </a>
-          </div>
-        </div>
-      </footer>
+      </FirstPage>
       </Start>
   ); 
 }
@@ -475,7 +370,7 @@ justify-self: center;
 align-items: center; 
 height: 100vh; 
 minWidth: 100%;
-background-image: url("/config/images/isekai.jpg");
+background-image: url("/config/images/banner_magix.png");
 background-position: 50%; 
 background-repeat: no-repeat;
 background-size: cover; 
@@ -567,6 +462,9 @@ box-sizing: border-box;
   height: 55vh;
 }
 @media (max-width: 1450px) {
+  height: 55vh;
+}
+@media (min-width: 1535px) {
   height: 55vh;
 }
 `;
