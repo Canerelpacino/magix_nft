@@ -13,7 +13,7 @@ export const StyledButton = styled.button`
   font-family: 'Freckle Face', cursive;
   font-size: 20px;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: none;
   background-color: var(--secondary);
   padding: 15px;
@@ -84,7 +84,7 @@ margin-top: 10vh;
 `;
 
 export const MintText = styled.div`
-width: 38%;
+width: 70%;
 margin-top: 3px;
 text-align: center;
   @media (max-width: 600px) {
@@ -117,20 +117,10 @@ export const Start = styled.div`
 `;
 
 function App() {
-
   const [state, setstate] = useState(false);
-  const changeScroll = () => {
-    
-    const scrollValue = document.documentElement.scrollTop;
-    if(scrollValue>100){
-      setstate(true);
-    } else {
-      setstate(false);
-    }
-
-  }
-
-  window.addEventListener('scroll', changeScroll);
+  setTimeout(function(){
+    setstate(true);
+},1000);
 
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
@@ -234,26 +224,30 @@ function App() {
   return (
     <Start>
       <FirstPage>
+      <HideImage className={state? "left-image-move":"left-image"}>
+          <span className="left-image-span">
+            <span className="image-span"></span>
+            <img className="hero" src="/config/images/5_copy.png"></img>
+          </span>
+        </HideImage>
+        <HideImage className={state? "right-image-move":"right-image"}>
+          <span className="left-image-span">
+            <span className="image-span"></span>
+            <img className="hero" src="/config/images/magix_wizard.png"></img>
+          </span>
+        </HideImage>
         <div style={{width: '98%', display: 'flex', flexDirection: 'row-reverse', marginTop: '15px'}}>
-          <a href="https://www.google.de/?hl=de">
-          <img style={{width: '75px'}} src="/config/images/TW_magix.png"></img>
+          <a href="https://twitter.com/TheMagixNFT">
+          <img style={{width: '65px'}} src="/config/images/TW_magix.png"></img>
           </a>
           <a href="https://www.google.de/?hl=de">
-          <img style={{width: '75px', marginRight: '5px'}} src="/config/images/OS_magix.png"></img>
+          <img style={{width: '65px', marginRight: '5px'}} src="/config/images/OS_magix.png"></img>
           </a>
         </div>
-        <div style={{display: 'flex', width: '70%', marginTop: '24px'}}>
+        <div style={{display: 'flex', width: '100%', marginTop: '24px'}}>
           <StyledLogo2 src="/config/images/logo_magix.png"></StyledLogo2>
         </div>
-        <MintText>
-          <s.TextTitle>
-                      A 2,500 collection of Moon Vamps. You’ll need to have $BLOOD in 
-                      your wallet to mint. Each Moon Vamp costs 60 $BLOOD to mint. 
-                      If you don’t have enough you will be able to 
-                      make up the difference with ETH.
-          </s.TextTitle>
-        </MintText>
-        <div>
+        <div style={{display: 'flex', marginTop: '5px'}}>
         {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
@@ -370,7 +364,7 @@ justify-self: center;
 align-items: center; 
 height: 100vh; 
 minWidth: 100%;
-background-image: url("/config/images/banner_magix.png");
+background-image: linear-gradient(180deg,transparent 80%,#7154F0),linear-gradient(0deg,transparent 80%,#000), url("/config/images/magixbanner.png");
 background-position: 50%; 
 background-repeat: no-repeat;
 background-size: cover; 
@@ -421,9 +415,9 @@ display: flex;
 flex-direction: column; 
 justify-self: center; 
 align-items: center; 
-height: 90vh; 
+height: 100vh; 
 minWidth: 100%;
-background-image: url("/config/images/back.webp");
+background-image: linear-gradient(180deg,transparent 60%,#000),linear-gradient(0deg,transparent 50%,#000), url("/config/images/donotenter.jpg");
 background-position: 50%; 
 background-repeat: no-repeat;
 background-size: cover; 
@@ -442,31 +436,14 @@ display: flex;
 flex-direction: column; 
 justify-self: center; 
 align-items: center; 
-height: 70vh; 
+height: 5vh; 
 minWidth: 100%;
-background-image: url("/config/images/back.webp");
+background-color: black;
 background-position: 50%; 
 background-repeat: no-repeat; 
 background-size: cover; 
 text-align: center; 
 box-sizing: border-box;
-@media (max-width: 900px) {
-  visibility: hidden;
-  clear: both;
-  float: left;
-  margin: 10px auto 5px 20px;
-  width: 28%;
-  display: none;
-}
-@media (min-width: 1850px) {
-  height: 55vh;
-}
-@media (max-width: 1450px) {
-  height: 55vh;
-}
-@media (min-width: 1535px) {
-  height: 55vh;
-}
 `;
 
 export const HideImage = styled.div`

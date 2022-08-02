@@ -90,14 +90,11 @@
 
 .left-image{
     opacity: 0;
-    transform: translate(-150px, 150px);
+    transform: translate(-150px, 315px);
     visibility: hidden;
     display: block;
     position: absolute;
-    min-height: 50%;
-    width: 50%;
-    max-width: 900px;
-    height: auto;
+    width: 30%;
     left: -10%;
     pointer-events: none;
     transition: all 1.2s ease-in-out;
@@ -106,14 +103,11 @@
 
 .left-image-move {
     opacity: 1;
-    transform: translate(20px, -100px);
+    transform: translate(150px, 315px);
     visibility: inherit;
     display: block;
     position: absolute;
-    min-height: 50%;
-    width: 50%;
-    max-width: 900px;
-    height: auto;
+    width: 30%;
     left: -10%;
     pointer-events: none;
     transition: all 1.2s ease-in-out;
@@ -125,14 +119,11 @@
 
 .right-image{
     opacity: 0;
-    transform: translate(150px, 150px);
+    transform: translate(50px, 315px);
     visibility: hidden;
     display: block;
     position: absolute;
-    min-height: 50%;
-    width: 50%;
-    max-width: 900px;
-    height: auto;
+    width: 30%;
     right: -10%;
     pointer-events: none;
     transition: all 1.2s ease-in-out;
@@ -140,14 +131,11 @@
 
 .right-image-move {
     opacity: 1;
-    transform: translate(-120px, -100px);
+    transform: translate(-150px, 315px);
     visibility: inherit;
     display: block;
     position: absolute;
-    min-height: 50%;
-    width: 50%;
-    max-width: 900px;
-    height: auto;
+    width: 30%;
     right: -10%;
     pointer-events: none;
     transition: all 1.2s ease-in-out;
@@ -156,6 +144,22 @@
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
 }
+
+@media (min-width: 1900px) {
+    .left-image{
+        transform: translate(-150px, 270px);
+    }
+    .left-image-move{
+        transform: translate(150px, 270px);
+    }
+    .right-image{
+        transform: translate(150px, 270px);
+    }
+    .right-image-move{
+        transform: translate(-150px, 270px);
+    }
+  }
+
 
 * {
     box-sizing: border-box;

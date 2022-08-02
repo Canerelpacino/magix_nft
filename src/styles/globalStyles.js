@@ -53,7 +53,7 @@ export const Container = styled.div`
 
 export const TextTitle = styled.p`
   color: var(--accent-text);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.6;
   font-family: 'Freckle Face', cursive;
