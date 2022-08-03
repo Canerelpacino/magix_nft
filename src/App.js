@@ -190,8 +190,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 5) {
-      newMintAmount = 5;
+    if (newMintAmount > 1) {
+      newMintAmount = 1;
     }
     setMintAmount(newMintAmount);
   };
@@ -224,7 +224,14 @@ function App() {
 
   return (
     <Start>
-      <div>
+         
+      <SecondPage>
+        <div style={{display: 'flex', width: '50%', margin: 'auto', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+        <img src="/config/images/logo_magix.png" style={{width: '100%'}}></img>
+        <s.TextTitle style={{fontSize: '30px'}}>Ooops... you have to be on your desktop to mint your Magix!</s.TextTitle>
+        </div>
+      </SecondPage>
+      <div className="desktop">
       <div className="video-wrapper">
         <video autoPlay loop muted>
           <source src={bg} type="video/mp4"></source>
@@ -268,13 +275,9 @@ function App() {
                   <s.Container ai={"center"} jc={"center"}>
                     <s.SpacerSmall />
                     <StyledButton
-                      onClick={(e) => {
-                        e.preventDefault();
-                        dispatch(connect());
-                        getData();
-                      }}
+                    
                     >
-                      CONNECT WALLET
+                      SOOOOON...
                     </StyledButton>
                     {blockchain.errorMsg !== "" ? (
                       <>
@@ -397,17 +400,19 @@ justify-self: center;
 align-items: center; 
 height: 100vh; 
 minWidth: 100%;
-background-image: linear-gradient(180deg,transparent 60%,#000),linear-gradient(0deg,transparent 50%,#000), url("/config/images/donotenter.jpg");
+background-image: linear-gradient(180deg,transparent 60%,#000),linear-gradient(0deg,transparent 50%,#000), url("/config/images/banner_magix.png");
 background-position: 50%; 
 background-repeat: no-repeat;
 background-size: cover; 
 text-align: center; 
 box-sizing: border-box;
-@media (max-width: 900px) {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+@media (orientation: landscape) {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
 }
 `;
 
