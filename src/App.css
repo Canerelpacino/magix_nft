@@ -236,3 +236,15 @@ video {
     }
   }
  
+  .soon{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Freckle Face', cursive;
+    color: white;
+    font-size: 40px;
+  }
