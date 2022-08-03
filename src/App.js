@@ -5,6 +5,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import './App.css';
+import bg from "./video/bg.mp4"
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -223,8 +224,12 @@ function App() {
 
   return (
     <Start>
-      <FirstPage>
-
+      <div>
+      <div className="video-wrapper">
+        <video autoPlay loop muted>
+          <source src={bg} type="video/mp4"></source>
+        </video>
+        </div>
         <div className={state? "left-image-move":"left-image"}>
           <img src="/config/images/5_copy.png"></img>
         </div>
@@ -232,19 +237,17 @@ function App() {
           <img src="/config/images/magix_wizard.png"></img>
         </div>
 
-        <div style={{width: '98%', display: 'flex', flexDirection: 'row-reverse', marginTop: '15px'}}>
-          <a href="https://twitter.com/TheMagixNFT">
-          <img style={{width: '65px'}} src="/config/images/TW_magix.png"></img>
-          </a>
-          <a href="https://www.google.de/?hl=de">
-          <img style={{width: '65px', marginRight: '5px'}} src="/config/images/OS_magix.png"></img>
-          </a>
+        <div className="socials">
+          <img style={{width: '70px', height: '70px'}} src="/config/images/TW_magix.png"></img>
+          <img style={{width: '70px', height: '70px'}} src="/config/images/os_magix.png"></img>
         </div>
-        <div style={{display: 'flex', width: '100%', marginTop: '24px'}}>
-          <StyledLogo2 src="/config/images/logo_magix.png"></StyledLogo2>
-        </div>
-        <div style={{display: 'flex', marginTop: '5px'}}>
-        {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
+
+        <div className="connect">
+          <div className="logo-image">
+            <img src="/config/images/logo_magix.png" style={{width: '40%'}}></img>
+          </div>
+          <div className="mint-button">
+          {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
@@ -347,32 +350,13 @@ function App() {
                 )}
               </>
             )}
+          </div>
         </div>
-      </FirstPage>
+        
+      </div>
       </Start>
   ); 
 }
-
-export const FirstPage = styled.div`
-display: flex; 
-flex-direction: column; 
-justify-self: center; 
-align-items: center; 
-height: 100vh; 
-minWidth: 100%;
-background-image: linear-gradient(180deg,transparent 80%,#7154F0),linear-gradient(0deg,transparent 80%,#000), url("/config/images/magixbanner.png");
-background-position: 50%; 
-background-repeat: no-repeat;
-background-size: cover; 
-text-align: center; 
-box-sizing: border-box;
-@media (max-width: 900px) {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-}
-`;
 
 
 export const ThirdPage = styled.div`

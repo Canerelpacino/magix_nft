@@ -141,7 +141,7 @@
     height: 60%;
     bottom: 0;
     right: -10%;
-    transform: translate(-100px, 0px);
+    transform: translate(-70px, 0px);
     pointer-events: none;
     transition: all 1.2s ease-in-out;
 }
@@ -149,4 +149,78 @@
 
 * {
     box-sizing: border-box;
+}
+
+.video-wrapper{
+     /* Telling our absolute positioned video to 
+  be relative to this element */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  /* Will not allow the video to overflow the 
+  container */
+  overflow: hidden;
+
+  /* Centering the container's content vertically 
+  and horizontally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+    /** Simulationg background-size: cover */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.logo-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mint-button{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 5px;
+    right: 5px;
+    flex-direction: row-reverse;
+
 }
