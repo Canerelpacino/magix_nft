@@ -90,12 +90,14 @@
 
 .left-image{
     opacity: 0;
-    transform: translate(-150px, 315px);
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    width: 30%;
+    display: flex;
+    position: absolute; 
+    visibility: hidden; 
+    width: 35%;
+    height: 60%;
+    bottom: 0;
     left: -10%;
+    transform: translate(-150px, 0px);
     pointer-events: none;
     transition: all 1.2s ease-in-out;
 }
@@ -103,111 +105,48 @@
 
 .left-image-move {
     opacity: 1;
-    transform: translate(150px, 315px);
-    visibility: inherit;
-    display: block;
-    position: absolute;
-    width: 30%;
+    display: flex;
+    position: absolute; 
+    visibility: inherit; 
+    width: 35%;
+    height: 60%;
+    bottom: 0;
     left: -10%;
+    transform: translate(150px, 0px);
     pointer-events: none;
     transition: all 1.2s ease-in-out;
-    transition-property: all;
-    transition-duration: 1.2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
 }
 
 .right-image{
     opacity: 0;
-    transform: translate(50px, 315px);
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    width: 30%;
+    display: flex;
+    position: absolute; 
+    visibility: hidden; 
+    width: 35%;
+    height: 60%;
+    bottom: 0;
     right: -10%;
+    transform: translate(150px, 0px);
     pointer-events: none;
     transition: all 1.2s ease-in-out;
 }
+
 
 .right-image-move {
     opacity: 1;
-    transform: translate(-150px, 315px);
-    visibility: inherit;
-    display: block;
-    position: absolute;
-    width: 30%;
+    display: flex;
+    position: absolute; 
+    visibility: inherit; 
+    width: 35%;
+    height: 60%;
+    bottom: 0;
     right: -10%;
+    transform: translate(-100px, 0px);
     pointer-events: none;
     transition: all 1.2s ease-in-out;
-    transition-property: all;
-    transition-duration: 1.2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
 }
-
-@media (min-width: 1900px) {
-    .left-image{
-        transform: translate(-150px, 270px);
-    }
-    .left-image-move{
-        transform: translate(150px, 270px);
-    }
-    .right-image{
-        transform: translate(150px, 270px);
-    }
-    .right-image-move{
-        transform: translate(-150px, 270px);
-    }
-  }
 
 
 * {
     box-sizing: border-box;
 }
-
-.left-image-span {
-    border: 0;
-    box-sizing: border-box;
-    display: block;
-    overflow: hidden;
-    width: initial;
-    height: initial;
-    background: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    
-}
-
-.image-span {
-    box-sizing: border-box;
-    display: block;
-    width: initial;
-    height: initial;
-    background: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 115.17027863777089%;
-}
-
-.hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-sizing: border-box;
-    padding: 0;
-    border: none;
-    margin: auto;
-    display: block;
-    width: 0;
-    height: 0;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-}
-
-
-

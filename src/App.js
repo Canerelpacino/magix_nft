@@ -224,18 +224,14 @@ function App() {
   return (
     <Start>
       <FirstPage>
-      <HideImage className={state? "left-image-move":"left-image"}>
-          <span className="left-image-span">
-            <span className="image-span"></span>
-            <img className="hero" src="/config/images/5_copy.png"></img>
-          </span>
-        </HideImage>
-        <HideImage className={state? "right-image-move":"right-image"}>
-          <span className="left-image-span">
-            <span className="image-span"></span>
-            <img className="hero" src="/config/images/magix_wizard.png"></img>
-          </span>
-        </HideImage>
+
+        <div className={state? "left-image-move":"left-image"}>
+          <img src="/config/images/5_copy.png"></img>
+        </div>
+        <div className={state? "right-image-move":"right-image"}>
+          <img src="/config/images/magix_wizard.png"></img>
+        </div>
+
         <div style={{width: '98%', display: 'flex', flexDirection: 'row-reverse', marginTop: '15px'}}>
           <a href="https://twitter.com/TheMagixNFT">
           <img style={{width: '65px'}} src="/config/images/TW_magix.png"></img>
