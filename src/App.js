@@ -245,8 +245,12 @@ function App() {
         </div>
 
         <div className="socials">
-          <img style={{width: '70px', height: '70px'}} src="/config/images/TW_magix.png"></img>
-          <img style={{width: '70px', height: '70px'}} src="/config/images/os_magix.png"></img>
+         <a href="https://twitter.com/TheMagixNFT"> 
+         <img style={{width: '70px', height: '70px'}} src="/config/images/TW_magix.png"></img>
+         </a>
+         <a href="https://opensea.io/collection/the-magix">
+         <img style={{width: '70px', height: '70px'}} src="/config/images/os_magix.png"></img>
+         </a>
         </div>
 
         <div className="connect">
